@@ -1,0 +1,41 @@
+.navbar{
+    background-color: blue !important;
+} 
+
+.nav-link{
+    color: white !important;
+}
+
+#logo{
+    float: left;
+    font-size: 1.7em;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#home-jt{
+    background-image:asset-url("home_bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  //  height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+
