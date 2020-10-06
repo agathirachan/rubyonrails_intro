@@ -43,7 +43,8 @@ class ArticlesController < ApplicationController
     #   format.json { render json: @article.errors, status: :unprocessable_entity }
     #  end
     # end 
-    
+    # Work around for now to be deleted
+    @article.user = User.first
     # render plain: article_params.inspect
     if @article.save
         flash[:notice] ="Article was created successfully."
