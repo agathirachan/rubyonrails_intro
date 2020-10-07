@@ -1,7 +1,7 @@
 
 <% if obj.errors.any? %>
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <h4 class="alert-heading">The following errors prevented the article form being saved</h4>
+        <h4 class="alert-heading">The following errors prevented the <%= obj.class.name.downcase %> form being saved</h4>
         <% obj.errors.full_messages.each do |err| %>
             <li>
               <%= err %>
