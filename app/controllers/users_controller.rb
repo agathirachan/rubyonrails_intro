@@ -12,12 +12,27 @@ class UsersController < ApplicationController
           render 'new'
         end
     end
+    
+    def edit
+      set_user
+    end
+
+    def update
+        set_user
+        if @user.update(user_params)
+          flash[:notice] ="User was successfully updated."
+          redirect_to articles_path
+        else
+          render 'edit'
+        end
+    end
+  
      # anything below private is a private method
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user
     # byebug
-    @user = Article.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
