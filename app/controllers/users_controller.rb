@@ -26,6 +26,10 @@ class UsersController < ApplicationController
           render 'edit'
         end
     end
+    
+    def show
+      set_user
+    end
   
      # anything below private is a private method
   private
